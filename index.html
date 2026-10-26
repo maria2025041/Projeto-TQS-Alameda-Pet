@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f8f6f0">
+    <title>AlamedaPet — tudo para os teus melhores amigos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="announcement">
+      <span>ENTREGA GRÁTIS</span> em compras superiores a 45€ <span class="announcement-divider">·</span> mimo de boas-vindas: <strong>ALAMEDA10</strong>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="AlamedaPet, página inicial">
+        <span class="brand-mark" aria-hidden="true">a<span>p</span></span>
+        <span class="brand-name">alameda<span>pet</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="#produtos">Loja</a>
+        <a href="#categorias">Cães</a>
+        <a href="#categorias">Gatos</a>
+        <a href="#sobre">A nossa história</a>
+      </nav>
+      <div class="header-actions">
+        <label class="search-box">
+          <span class="sr-only">Pesquisar produtos</span>
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input id="search-input" type="search" placeholder="O que procuras?" autocomplete="off">
+          <kbd>⌘ K</kbd>
+        </label>
+        <button class="icon-button account-button" type="button" aria-label="A minha conta">♙</button>
+        <button class="cart-button" id="cart-button" type="button" aria-label="Abrir carrinho">
+          <span aria-hidden="true">♧</span><span class="cart-label">Carrinho</span><span class="cart-count" id="cart-count">0</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> PARA QUEM FAZ PARTE DA FAMÍLIA</span>
+          <h1>Pequenos gestos.<br><span>Caudas felizes.</span></h1>
+          <p>O melhor para os teus companheiros, escolhido com cuidado e entregue à porta de casa.</p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#produtos">Descobrir a loja <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="#categorias">Conhecer categorias <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="hero-note">
+            <div class="avatar-stack" aria-hidden="true"><span>🐶</span><span>🐱</span><span>🐕</span></div>
+            <p><strong>2.400+</strong> amigos de quatro patas<br>já compram connosco</p>
+          </div>
+        </div>
+        <div class="hero-art">
+          <div class="hero-image-wrap">
+            <img src="https://images.unsplash.com/photo-1551717743-49959800b1f6?auto=format&fit=crop&w=1200&q=85" alt="Cão feliz sentado num jardim ensolarado">
+          </div>
+          <div class="floating-note"><span class="floating-icon">✳</span><span>Feito com<br><strong>muito mimo</strong></span></div>
+          <div class="hero-sticker">PATAS<br>FELIZES<br><span>DESDE '24</span></div>
+          <span class="art-sparkle sparkle-one" aria-hidden="true">✳</span>
+          <span class="art-sparkle sparkle-two" aria-hidden="true">✦</span>
+        </div>
+        <div class="hero-bottom"><span>01 / 04</span><span class="hero-line"></span><span>DESCOBRE O QUE PREPARÁMOS</span></div>
+      </section>
+
+      <section class="category-section section-wrap" id="categorias">
+        <div class="section-heading">
+          <div><span class="eyebrow">UM MUNDO DE POSSIBILIDADES</span><h2>Quem é o sortudo?</h2></div>
+          <a class="text-link" href="#produtos">Ver tudo <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="category-grid">
+          <a class="category-card category-dogs" href="#produtos" data-category="Cão">
+            <span class="category-emoji" aria-hidden="true">🐕</span><span class="category-title">Para cães</span><span class="category-caption">Brincar, passear, petiscar</span><span class="category-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="category-card category-cats" href="#produtos" data-category="Gato">
+            <span class="category-emoji" aria-hidden="true">🐈</span><span class="category-title">Para gatos</span><span class="category-caption">Ronrons e sestas melhores</span><span class="category-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="category-card category-home" href="#produtos" data-category="Casa">
+            <span class="category-emoji" aria-hidden="true">🏡</span><span class="category-title">Para a casa</span><span class="category-caption">Conforto para todos</span><span class="category-arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="products-section section-wrap" id="produtos">
+        <div class="section-heading product-heading">
+          <div><span class="eyebrow">OS FAVORITOS DA ALAMEDA</span><h2>Coisas boas, <span>mesmo boas.</span></h2></div>
+          <div class="product-controls">
+            <div class="filter-tabs" role="group" aria-label="Filtrar produtos">
+              <button class="filter-tab active" type="button" data-filter="Todos">Tudo</button>
+              <button class="filter-tab" type="button" data-filter="Cão">Cães</button>
+              <button class="filter-tab" type="button" data-filter="Gato">Gatos</button>
+            </div>
+            <label class="sort-label" for="sort-select">Ordenar:</label>
+            <select id="sort-select" aria-label="Ordenar produtos">
+              <option value="featured">Destaques</option>
+              <option value="price-low">Preço: mais baixo</option>
+              <option value="price-high">Preço: mais alto</option>
+            </select>
+          </div>
+        </div>
+        <div class="results-note" id="results-note" aria-live="polite"></div>
+        <div class="product-grid" id="product-grid"></div>
+        <div class="empty-state" id="empty-state" hidden>
+          <span aria-hidden="true">🔎</span><h3>Não encontrámos nada por aqui</h3><p>Experimenta outra pesquisa ou espreita os nossos favoritos.</p>
+          <button class="button button-dark" id="clear-filters" type="button">Ver todos os produtos</button>
+        </div>
+        <div class="load-more-wrap"><button class="button button-outline" id="load-more" type="button">Ver mais produtos <span aria-hidden="true">↓</span></button></div>
+      </section>
+
+      <section class="promise-section" id="sobre">
+        <div class="promise-inner">
+          <div class="promise-intro"><span class="eyebrow">A VIDA É MELHOR COM PATAS</span><h2>Mais do que uma loja.<br><span>Uma família.</span></h2><p>Escolhemos cada produto como se fosse para os nossos. Porque sabemos que o teu melhor amigo merece o melhor.</p><a class="text-link" href="#newsletter">A nossa história <span aria-hidden="true">→</span></a></div>
+          <div class="promise-item"><span class="promise-icon">♡</span><h3>Escolhas com cuidado</h3><p>Produtos selecionados por quem também tem patudos em casa.</p></div>
+          <div class="promise-item"><span class="promise-icon">⌁</span><h3>À tua porta, depressa</h3><p>Encomendas preparadas com mimo e enviadas em 24–48h.</p></div>
+          <div class="promise-item"><span class="promise-icon">✳</span><h3>Pessoas de verdade</h3><p>Precisaste de ajuda? Estamos aqui para ti e para o teu patudo.</p></div>
+        </div>
+      </section>
+
+      <section class="newsletter-section section-wrap" id="newsletter">
+        <div class="newsletter-icon" aria-hidden="true">✳</div>
+        <div class="newsletter-copy"><span class="eyebrow">UMA NEWSLETTER COM PATAS</span><h2>Boas notícias. <span>Zero spam.</span></h2><p>Dicas, novidades e 10% de mimo na primeira encomenda.</p></div>
+        <form class="newsletter-form" id="newsletter-form">
+          <label class="sr-only" for="email-input">O teu endereço de email</label>
+          <input id="email-input" name="email" type="email" placeholder="O teu endereço de email" required>
+          <button class="button button-dark" type="submit">Quero receber <span aria-hidden="true">→</span></button>
+          <p id="newsletter-message" class="newsletter-message" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#"><span class="brand-mark" aria-hidden="true">a<span>p</span></span><span class="brand-name">alameda<span>pet</span></span></a>
+      <p>Feito com mimo em Portugal <span aria-hidden="true">♡</span></p>
+      <div class="footer-links"><a href="#sobre">Contactos</a><a href="#sobre">Envios e devoluções</a><a href="#sobre">Instagram ↗</a></div>
+      <span class="copyright">© 2025 AlamedaPet</span>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <aside class="cart-drawer" id="cart-drawer" aria-label="O teu carrinho" aria-hidden="true">
+      <div class="cart-drawer-header"><div><span class="eyebrow">AS TUAS ESCOLHAS</span><h2>O teu carrinho <span id="drawer-count">(0)</span></h2></div><button class="close-cart" id="close-cart" type="button" aria-label="Fechar carrinho">×</button></div>
+      <div class="cart-items" id="cart-items"></div>
+      <div class="cart-empty" id="cart-empty"><span aria-hidden="true">🧺</span><h3>Está um bocadinho vazio</h3><p>O teu patudo está à espera de uma surpresa.</p><button class="text-link" id="continue-shopping" type="button">Continuar a explorar <span aria-hidden="true">→</span></button></div>
+      <div class="cart-summary" id="cart-summary"><div><span>Subtotal</span><strong id="cart-subtotal">0,00 €</strong></div><p>Portes calculados no checkout</p><button class="button button-dark checkout-button" id="checkout-button" type="button">Avançar para checkout <span aria-hidden="true">→</span></button></div>
+    </aside>
+    <div class="drawer-backdrop" id="drawer-backdrop"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
